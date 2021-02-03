@@ -11,7 +11,28 @@
     {% endfor %}
 </ul>
 
+<div class="myChart"></div>
+
 <a class="btn btn-secondary" href="{% url 'polls:index' %}">Back To Polls</a>
 <a class="btn btn-dark" href="{% url 'polls:detail' question.id %}">Vote again?</a>
 
+<script>
+    
+    var charData = {
+        "type":"bar",
+        "scale-x":{
+            "value":[
+                "Dennis",
+                "Erik",
+                "Tim"
+    }
+    
+    zingChart.render({
+        id: "myChart",
+        data: charData,
+    });
+    
+</script>
+
+    
 {% endblock %}
